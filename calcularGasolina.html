@@ -1,0 +1,60 @@
+<meta charset="utf-8">
+<title>Alcool x gasolina</title>
+<script>
+	function quebraLinha(){
+		document.write("<br>");
+	}
+	function exibe(texto){
+		document.write(texto);
+	}
+	function sair(){
+		prompt("deseja outro");
+	}
+
+	var alcool = parseFloat(prompt("Informe o preço do álcool: ").replace(",", "."));
+	var gasolina = parseFloat(prompt("Informe o preço da gasolina: ").replace(",", "."));
+
+	var soma = (alcool/gasolina).toFixed(2);
+
+	exibe("<h4>Descubra se o álcool é mais vantajoso ou não!</h6>");
+
+	if(soma > 0.7){
+		exibe("Vale a pena abastecer com gasolina!");
+	} else if(soma < 0.7) {
+		exibe("Vale a pena abastecer com Álcool!");
+	} else if(soma == 0.7){
+		exibe("Vale a pena abastecer com um ou outro!");
+	}
+
+
+	quebraLinha();
+	exibe("O resultado é: " + soma);
+	quebraLinha();
+
+	
+</script>
+
+  var alcool, gasolina, soma, continuar;
+
+  do{
+
+  var alcool = parseFloat(prompt("Informe o preço do álcool: ").replace(",", "."));
+	var gasolina = parseFloat(prompt("Informe o preço da gasolina: ").replace(",", "."));
+
+	var soma = (alcool/gasolina).toFixed(2);
+
+	if (soma > 0.7){
+		alert("O resultado é: " + soma + " / Vale a pena abastecer com gasolina!");
+	} if (soma < 0.7) {
+		alert("O resultado é: " + soma + " / Vale a pena abastecer com Álcool!");
+	} if (soma == 0.7){
+		alert("O resultado é: " + soma +  " / Vale a pena abastecer com um ou outro!");
+	}
+
+  continuar = prompt ("Deseja verificar outro valor? s/n");
+
+}while ( continuar == "s");
+
+if (continuar == "n");{
+  alert("Volte sempre!!!")
+}
